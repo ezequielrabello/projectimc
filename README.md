@@ -1,4 +1,4 @@
-# Body Mass Index (BMI)
+# ⚖️ Body Mass Index (BMI)
 <img src="/assets/imc_s.png">
 <img src="/assets/imc_n.png">
 
