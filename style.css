@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-background: #040924;
+  --color-title: #0C3440;
+  --color-text: var(--brand-green-hover, #00453A);
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-background);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: white;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  max-width: 42.8rem;
+  border-radius: .6rem;
+  box-shadow: 0 .2rem .4rem 0 rgba(0, 0, 0, 0.10);
+}
+
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  color: var(--color-title);
+  margin-bottom: 3.2rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  font-size: 1.4rem;
+  color: var(--color-text);
+  font-weight: 400;
+  line-height: 1.8rem;
+  margin-bottom: .8rem;
+}
+
+.input-wrapper input {
+  padding: 1.6rem;
+  border-radius: .4rem;
+  background: #DCE2E9;
+  border: 0;
+  margin-bottom: 1.6rem;
+}
+
+
+.bto {
+  margin-top: 1.6rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  cursor: pointer;
+  padding: 1.6rem;
+  background: var(--brand-colors-explorer-mid, #02799D);
+  color: white;
+  border: none;
+  gap: .8rem;
+}
+
+button:hover {
+  background-color: #157fa0;
+}
+
+.screen2 {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.70);
+  display: grid;
+  place-content: center;
+  /* screen2 não aparece por padrão. 
+  Então precisamos sumir com ela. 
+  Mas não faremos isso usamos a classe HIDE. 
+  Vamos fazer usando classe OPEN
+  Daí, façamos o seguinte: */
+  opacity: 0;
+  visibility: hidden;
+}
+/* Aqui nós iremos fazer com que screen2 receba 
+um open de novo, da seguinte forma: */
+
+.screen2.open {
+  /* aqui eu estou dizendo "quando screen2 tiver o open..." */
+  opacity: 1;
+  visibility: visible;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  color: var(--color-title);
+}
+
+.modal {
+  position: relative;
+}
+
+.close {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 1.6rem;
+  top: 1.6rem;
+  cursor: pointer;
+  transition: transform.3s;
+}
+
+.close:hover {
+  transform: scale(1.1);
+  background: rgb(235, 234, 234);
+
+}
+
+/* caixinha de erro que aparece em cima */
+
+.alert-error {
+  background: #F03E3E;
+  padding: .8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+
+ /*  normalmente ela nao aparece, entao.. */
+  opacity: 0;
+  visibility: hidden;
+/*   vou deixar ela escondida para aparecer depois
+  como se estivesse caindo */
+  transform: translateY(-30px);
+  transition: transform .5s;
+}
+
+/* mas quando .alert-error tiver open.. */
+.alert-error.open {
+  opacity: 1;
+  visibility: visible;
+/*   alem disso, vou fazer a caixa aparecer
+  de cima para baixo */
+  transform: translateY(0);
+}
+
+span {
+  display: flex;
+  width: max-content;
+
+}
