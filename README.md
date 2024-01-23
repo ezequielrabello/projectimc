@@ -1,13 +1,16 @@
 # Body Mass Index (BMI)
 <img src="/assets/imc_s.png">
 <img src="/assets/imc_n.png">
+
 ## 🔧 Technologies
-This project was delevoped with the following technologies:
+
+This project was developed with the following technologies:
 - Javascript 
 - HTML
 - CSS
+  
 ## 👨🏻‍💻 About the project
-In this project, I created an application to calcule your body mass index (also known, in Portuguese as IMC). It's pretty easy and simple to use it. Make sure to type only numbers when calcule your body mass index. 😉
+In this project, I created an application to calculate your body mass index (also known, in Portuguese as IMC). It's pretty easy and simple to use it. Make sure to type only numbers when calculating your body mass index. 😉
 
 ## 🔗 Links
 
